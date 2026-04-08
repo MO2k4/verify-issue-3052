@@ -1,0 +1,19 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.2.0">
+
+  <ItemGroup>
+    <ProjectReference Include="..\VerifyIssue3052.FuncApp\VerifyIssue3052.FuncApp.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.Azure.Functions" Version="13.2.1" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>3c0e66df-8e8c-4d65-9459-19506261e2d5</UserSecretsId>
+  </PropertyGroup>
+
+</Project>

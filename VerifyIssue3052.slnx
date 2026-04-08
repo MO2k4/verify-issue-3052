@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="FuncApp/FuncApp.fsproj" />
-  <Project Path="ServiceDefaults/ServiceDefaults.csproj" />
-</Solution>

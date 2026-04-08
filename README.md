@@ -15,7 +15,7 @@ The issue states that F# users who need to manually call extension startup `Conf
 
 ## This repo proves it
 
-The F# function app in `FuncApp/` does exactly what the issue asks for, **without** the proposed overloads and **without** any reflection hack:
+This is a real .NET Aspire project (`dotnet new aspire`) with an F# Azure Functions app that does exactly what the issue asks for, **without** the proposed overloads and **without** any reflection hack:
 
 ```fsharp
 let builder = FunctionsApplication.CreateBuilder(args)
@@ -31,10 +31,18 @@ builder.AddServiceDefaults() |> ignore
 builder.Build().Run()
 ```
 
+## Structure
+
+| Project | Description |
+|---------|-------------|
+| `VerifyIssue3052.AppHost` | Aspire orchestrator |
+| `VerifyIssue3052.ServiceDefaults` | Aspire service defaults (template-generated) |
+| `VerifyIssue3052.FuncApp` | F# Azure Functions app proving the point |
+
 ## Build
 
 ```bash
 dotnet build
 ```
 
-Requires .NET 10 SDK.
+Requires .NET 10 SDK and Aspire workload (`dotnet workload install aspire`).
